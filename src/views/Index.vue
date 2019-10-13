@@ -1,29 +1,22 @@
 <template>
-    <div class="number">
-        123123123
-        <div @click="gotoPage" class="click">
-            点我
-        </div>
+    <div class="wrapper">
+        <Swiper></Swiper>
     </div>
 </template>
 
 <script>
-    export default {
-        name: "Index",
-        methods:{
-            gotoPage(){
-                this.$router.push('/industry')
-            }
-        }
+export default {
+    name: "Index",
+    components:{
+        Swiper:()=>import("@/components/Swiper.vue")
     }
+
+}
 </script>
 
 <style scoped lang="scss">
-.number{
-    border:1px solid red;
-    font-size:20px;
-    .click{
-        color:red;
-    }
+
+.wrapper{
+    width: 100vw;
 }
 </style>
