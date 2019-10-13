@@ -13,6 +13,7 @@ Vue.prototype.$eventBus = new Vue()
 Vue.store = store
 Vue.nprogress = Vue.prototype.$nprogress = Nprogress
 
+Vue.nprogress.start()
 
 new Vue({
   router,
