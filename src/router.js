@@ -21,6 +21,21 @@ const router = new Router({
       name: 'industry',
       component: ()=>import('@/views/Industry.vue')
     },
+    {
+      path: '/social',
+      name: 'social',
+      component: ()=>import('@/views/Social.vue')
+    },
+    {
+      path: '/news',
+      name: 'news',
+      component: ()=>import('@/views/News.vue')
+    },
+    // {
+    //   path: '/jd',
+    //   name: 'jd',
+    //   component: ()=>import('@/views/JD.vue')
+    // },
   ]
 })
 
