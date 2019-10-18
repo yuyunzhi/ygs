@@ -23,16 +23,14 @@
 
 <style scoped lang="scss">
 .title-wrapper{
-    border:1px solid red;
-   display: flex;
+    width:1000px;
+    margin:0 auto;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     .liner{
-        position: absolute;
-        top:-15px;
-        left:50%;
-        transform: translateX(-50%);
+        margin:0 auto;
         width:60px;
         height:2px;
         border-top:2px solid #53b095;
@@ -42,11 +40,12 @@
        font-size:28px;
        font-weight:300;
        line-height:32px;
+       margin-top:15px;
    }
     .english-name{
         color:#53b095;
         font-size:28px;
-        font-weight:300;
+        font-weight:200;
         line-height:32px;
     }
     .describe{

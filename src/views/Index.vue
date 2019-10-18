@@ -22,7 +22,7 @@
                 <div>基于计算社会科学</div>
                 <div>弈格思致力于助力客户的战略决策</div>
             </div>
-            <span class="more" @click="learnMorePage">了解更多</span>
+            <span class="more" @click="gotoIndustryPage">了解更多</span>
         </header>
 
         <main>
@@ -62,7 +62,17 @@
             <div class="service">
                 <Title :title="titles[2]" class="title"></Title>
                 <div class="content">
-
+                    <div class="button">
+                        <div>经济</div>
+                        <div>企业、产业</div>
+                        <div @click="gotoIndustryPage">获取详情</div>
+                    </div>
+                    <img src="../assets/afuhan.png" alt="">
+                    <div class="button">
+                        <div>权力</div>
+                        <div>政治、社会</div>
+                        <div @click="gotoSocialPage">获取详情</div>
+                    </div>
                 </div>
             </div>
             <div class="introduce">
@@ -72,6 +82,10 @@
                 </div>
             </div>
         </main>
+        <footer>
+            <Footer :title="titles[4]"></Footer>
+        </footer>
+
     </div>
 </template>
 
@@ -101,25 +115,31 @@ export default {
                     chineseName:'公司简介',
                     englishName:'Company profile',
                 },
+                {
+                    chineseName:'联系我们',
+                    englishName:'Contact us',
+                },
 
             ]
         }
     },
     methods:{
-        learnMorePage(){
+        gotoIndustryPage(){
             this.$router.push("/industry")
         },
         gotoNewsPage(){
             this.$router.push("/news")
         },
-        gotoJDPage(){
-            this.$router.push("/jd")
+        gotoSocialPage(){
+            this.$router.push("/social")
         }
     },
     components:{
         Swiper:()=>import("@/components/Swiper.vue"),
         Sticky:()=>import("@/components/Sticky.vue"),
-        Title:()=>import("@/components/Title.vue")
+        Title:()=>import("@/components/Title.vue"),
+        Footer:()=>import("@/components/Footer.vue")
+
 
     }
 
@@ -131,7 +151,6 @@ export default {
 .wrapper{
     width: 100vw;
     position: relative;
-    margin-bottom:500px;
     header{
         position: relative;
         .sticky{
@@ -155,9 +174,11 @@ export default {
                 top:0;
                 left:226px;
                 cursor: pointer;
-                &:active{
-                    background:#53b075;
+                &:hover{
+                    background-color: #179d82;
+                    border-color: #179d82;
                 }
+
                 >span{
                     color:white;
                     font-size:14px;
@@ -213,6 +234,7 @@ export default {
     }
     main{
         position: relative;
+        padding-bottom:72px;
         .news{
             .title{
                 margin-top:125px;
@@ -301,6 +323,56 @@ export default {
             .title{
                 margin-top:125px;
             }
+            .content{
+                display:flex;
+                flex-direction: row;
+                width:1000px;
+                margin:0 auto;
+                margin-top:40px;
+                justify-content: space-around;
+                align-items: center;
+                img{
+                    width:470px;
+                    height:470px;
+                }
+                .button{
+                    div:nth-child(1){
+                        color:#53b095;
+                        font-size:18px;
+                        font-weight:200;
+                        line-height: 28px;
+                        text-align: center;
+
+                    }
+                    div:nth-child(2){
+                        color:#676a6c  ;
+                        font-size:18px;
+                        font-weight:200;
+                        line-height: 28px;
+
+                    }
+                    div:nth-child(3){
+                        color:white;
+                        background:#53b095;
+                        font-size:14px;
+                        font-weight:600;
+                        width:100px;
+                        height:42px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top:5px;
+                        border-radius: 3px;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: #179d82;
+                            border-color: #179d82;
+                        }
+
+
+                    }
+                }
+            }
         }
         .introduce{
             position: relative;
@@ -318,6 +390,9 @@ export default {
 
             }
         }
+
+    }
+    footer{
 
     }
 
