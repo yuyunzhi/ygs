@@ -1,6 +1,6 @@
 <template>
     <div class="foot-wrapper">
-        <!--<img src="../assets/logo.png" alt="">-->
+        <div class="background-image"></div>
         <Title :title="title"></Title>
         <div class="content">
             <div class="name">{{footerInfo.companyName}}</div>
@@ -62,8 +62,16 @@
     height:570px;
     background: #f4f4f4;
     padding-top:60px;
-    img{
-
+    position: relative;
+    .background-image{
+        width:100%;
+        height:100%;
+        background: url("../assets/word_map.png") repeat;
+        position: absolute;
+        top:0;
+        left:50%;
+        transform: translateX(-50%);
+        z-index: 999;
     }
     .content{
         width:1000px;

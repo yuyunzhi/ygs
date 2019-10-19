@@ -1,17 +1,17 @@
 <template>
     <div>
-        <div class="swiper-container" v-if="picture.length>1">
+        <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" v-for="(item,index) in picture" :key="index+'ccc'" >
-                    <img :src="item"
+                <div class="swiper-slide" v-for="(n,index) in 20" :key="index+'ccc'" >
+                    <img :src="require(`@/assets/ppt/${index+1}.png`)"
                          alt="">
                 </div>
             </div>
             <!-- 如果需要分页器 -->
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination" ></div>
 
             <!-- 如果需要导航按钮 -->
-            <div class="swiper-button-prev">
+            <div class="swiper-button-prev" >
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-left"></use>
                 </svg>
@@ -23,15 +23,13 @@
             </div>
 
         </div>
-        <div class="swiper-container img" v-else >
-            <img :src="picture[0]" alt="">
-        </div>
+
     </div>
 </template>
 
 <script>
     export default {
-        name: "Swiper",
+        name: "PPTSwiper",
         props:{
             picture:{
                 type:Array,
@@ -46,7 +44,7 @@
             initSwiper() {
                 var mySwiper = new Swiper('.swiper-container', {
                     direction: 'horizontal', // 垂直切换选项
-                    loop: this.picture.length>1, // 循环模式选项
+                    loop: true, // 循环模式选项
 
                     // 如果需要分页器
                     pagination: {
@@ -71,56 +69,6 @@
 </script>
 
 <style scoped lang="scss">
-    .swiper-pagination.swiper-pagination-bullets{
-        bottom: 20px;
-        .swiper-pagination-bullet{
-            border:1px solid white;
-            width: 12px;
-            height: 12px;
-        }
-        .swiper-pagination-bullet.swiper-pagination-bullet-active{
-            border:1px solid white;
-            background:white;
-            width: 12px;
-            height: 12px;
-        }
-    }
-
-    .swiper-button-prev{
-        width: 40px;
-        height: 40px;
-
-        .icon{
-            fill:#9b969b;
-            width: 40px;
-            height: 40px;
-            &:hover{
-                fill:white;
-            }
-        }
-        &::after{
-            display: none;
-        }
-    }
-
-    .swiper-button-next{
-        margin-right:20px;
-        width: 40px;
-        height: 40px;
-        .icon{
-            width: 40px;
-            height: 40px;
-            fill:#9b969b;
-            &:hover{
-                fill:white;
-            }
-        }
-        &::after{
-            display: none;
-
-        }
-    }
-
     .icon {
         width: 50px;
         height: 50px;
@@ -128,7 +76,7 @@
         overflow: hidden;
     }
     .swiper-container {
-        width: 100%;
+        width: 800px;
         height: 470px;
 
         .swiper-wrapper {
@@ -143,15 +91,6 @@
                     width: 100%;
                     height: 470px;
                 }
-            }
-        }
-        &.img{
-            width: 100%;
-            height: 470px;
-
-            img {
-                width: 100%;
-                height: 470px;
             }
         }
 

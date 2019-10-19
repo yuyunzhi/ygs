@@ -12,7 +12,7 @@
                     </ul>
                 </div>
             </Sticky>
-            <Swiper></Swiper>
+            <Swiper :picture="picture"></Swiper>
             <div class="content">
                 <div>财富和权力驱动了人类社会 </div>
                 <div>获取及维持财富和权力均需要战略头脑</div>
@@ -63,10 +63,15 @@
 
 <script>
     export default {
-        name: "Index",
+        name: "News",
         data(){
             return{
                 distance:0,
+                picture:[
+                    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570982223814&di=e9b6f1bbf8e1fce5c69ed6b856cd4fb1&imgtype=0&src=http%3A%2F%2Fpic27.nipic.com%2F20130321%2F9678987_225139671149_2.jpg",
+                    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570982223814&di=00702d8d6d520502312948a4b39a646b&imgtype=0&src=http%3A%2F%2Fpic16.nipic.com%2F20111006%2F6239936_092702973000_2.jpg",
+                    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570982223814&di=5e57473e3840dfdc7a71fc4b18549629&imgtype=0&src=http%3A%2F%2Fpic25.nipic.com%2F20121112%2F9252150_150552938000_2.jpg"
+                ],
                 titles:[
                     {
                         chineseName:'产业研究：一年进展报告',
