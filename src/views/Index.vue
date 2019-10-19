@@ -247,6 +247,7 @@ export default {
                 width:100%;
                 text-align: center;
                 font-weight: 200;
+                cursor: pointer;
                 .report:hover{
                     color:#23527c;
                 }
@@ -258,6 +259,7 @@ export default {
                     font-size:16px;
                     line-height:30px;
                     width:100%;
+                    cursor: pointer;
                     &:hover{
                         color:#23527c;
                     }

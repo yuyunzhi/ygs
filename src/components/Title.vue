@@ -1,8 +1,8 @@
 <template>
     <div class="title-wrapper">
         <div class="liner"></div>
-        <div class="chinese-name">{{title.chineseName}}</div>
-        <div class="english-name">{{title.englishName}}</div>
+        <div class="chinese-name" v-if="title.chineseName">{{title.chineseName}}</div>
+        <div class="english-name" v-if="title.englishName">{{title.englishName}}</div>
         <div class="describe" v-if="title.desc1">{{title.desc1}}</div>
         <div class="describe" v-if="title.desc2">{{title.desc2}}</div>
     </div>
