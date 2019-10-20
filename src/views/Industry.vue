@@ -50,7 +50,6 @@
             </li>
         </ul>
       </div>
-
       <div class="applications">
         <Title :title="titles[1]" class="title"></Title>
         <ul class="content">
@@ -68,7 +67,6 @@
           </li>
         </ul>
       </div>
-
       <div class="sector">
         <Title :title="titles[2]" class="title"></Title>
         <ul class="content">
@@ -156,9 +154,80 @@
 
         </div>
       </div>
+      <div class="cases">
+        <Title :title="titles[4]" class="title"></Title>
+        <div class="article">
+          <img src="../assets/industry/1534489634(1).png" alt="" class="img-size-500 margin-top-20">
+          <p class="blue-green left bolder margin-bottom-20">埃塞俄比亚工业化与亚吉铁路经济走廊建设</p>
+          <p class="left bolder grey margin-bottom-20">复旦大学国际关系与公共事务学院非洲研究课题组，2017年12月9日课题组成员唐世平、郑宇、赵剑治、姜璐、Pippa、刘晨。</p>
+          <p class="left bolder grey margin-bottom-20">该项目为课题组受埃塞俄比亚总理特别顾问Arkebe Oqubay博士委托，为埃塞俄比亚产业园区和亚吉铁路沿线经济协同发展的所做的深入研究。</p>
+          <p class="left bolder grey margin-bottom-20">课题组成员先后调研了江苏常州、安徽芜湖、四川成都和重庆经济开发区，并访问了埃塞俄比亚工业园，与埃塞俄比亚相关领导人和政府部长进行了深入交流，对产业政策的理论依据、制度环境、基本方向、发展前景等方面进行了深入研究，该项目的研究成果获得商务部和外交部的高度评价，成为中国政府对非洲经济合作和埃塞俄比亚产业政策制定的重要依据。</p>
+          <img src="../assets/industry/tuoou.png" alt="" class="img-size-500 ">
+          <p class="blue-green left bolder margin-bottom-20">英国脱欧的未来及其影响</p>
+          <p class="left bolder grey margin-bottom-20">自2018年4月22日起，我司受香港某大型企业委托，历时两个半月，完成了预测英国脱欧的未来及其对英国经济产生的影响的项目。</p>
+          <p class="left bolder grey margin-bottom-20">该项目还探讨了英国脱欧对于国际货币市场影响，并预测未来可能出现的英镑汇率变化及英国相关经济指数走势。</p>
+          <p class="left bolder grey margin-bottom-20">项目组首先探讨脱欧对于英国本土市场可能产生的影响，并根据脱欧结果的不同设立相应的情景假设。然后通过量化的手段，对不同情景假设下的英国货币、金融市场进行分析及前景预测。该项目有效地预测出2019年7月之后的英镑整体趋势，从而帮助客户提前设定金融货币对冲策略，有效地降低了英镑贬值对客户可能造成的影响。</p>
+        </div>
+      </div>
+      <div class="report">
+        <Title :title="titles[5]" class="title"></Title>
+        <div class="content">
+          <div class="item">
+            <span>弈格思-2018-机械制造行业研究报告摘要</span>
+              <svg class="icon down" aria-hidden="true" @click="downLoadPDF" >
+                <use xlink:href="#icon-down"></use>
+              </svg>
+          </div>
+          <div class="item">
+            <span>弈格思-2018-房地产行业报告摘要</span>
+            <svg class="icon down" aria-hidden="true" @click="downLoadPDF" >
+              <use xlink:href="#icon-down"></use>
+            </svg>
+          </div>
+          <div class="item">
+            <span>弈格思-2019-乳制品行业报告摘要</span>
+            <svg class="icon down" aria-hidden="true" @click="downLoadPDF" >
+              <use xlink:href="#icon-down"></use>
+            </svg>
+          </div>
+          <div class="item">
+            <span>弈格思-2019-汽车产业报告摘要</span>
+            <svg class="icon down" aria-hidden="true" @click="downLoadPDF" >
+              <use xlink:href="#icon-down"></use>
+            </svg>
+          </div>
+          <div class="item">
+            <span>弈格思-2019-食品行业研究报告摘要</span>
+            <svg class="icon down" aria-hidden="true" @click="downLoadPDF" >
+              <use xlink:href="#icon-down"></use>
+            </svg>
+          </div>
+          <div class="item">
+            <span>弈格思-2019-医药行业研究报告摘要</span>
+            <svg class="icon down" aria-hidden="true" @click="downLoadPDF" >
+              <use xlink:href="#icon-down"></use>
+            </svg>
+          </div>
+          <div class="item">
+            <span>弈格思-2019-汽车零配件研究报告摘要</span>
+            <svg class="icon down" aria-hidden="true" @click="downLoadPDF" >
+              <use xlink:href="#icon-down"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="link">
+        <Title :title="titles[6]" class="title"></Title>
+        <div class="content">
+          <li><a href="http://www.scientistin.com/" target="_blank"><img src="../assets/industry/link/logonew.png" alt=""></a></li>
+          <li><a href="http://cig.ccxe.com.cn/index.html" target="_blank"><img src="../assets/industry/link/CIlogo.png" alt=""></a></li>
+          <li><a href="http://cig.ccxe.com.cn/product.html" target="_blank"><img src="../assets/industry/link/logocebm.png" alt=""></a></li>
+          <li><a href="http://www.koncen.com/" target="_blank"><img src="../assets/industry/link/kangsheng.png" alt=""></a></li>
+        </div>
+      </div>
     </main>
     <footer>
-      <Footer :title="titles[4]"></Footer>
+      <Footer :title="titles[titles.length-1]"></Footer>
     </footer>
 
   </div>
@@ -220,7 +289,9 @@
       },
       gotoSocialPage(){
         this.$router.push("/social")
-      }
+      },
+      downLoadPDF(){
+      },
     },
     components:{
       Swiper:()=>import("@/components/Swiper.vue"),
@@ -247,7 +318,7 @@
         z-index: 10;
         width:100%;
         height:70px;
-        border:1px solid red;
+
         .log{
           width:96px;
           height:70px;
@@ -310,7 +381,7 @@
       }
       .content{
         width:100%;
-        border:1px solid red;
+
         position: absolute;
         top:170px;
         left:50%;
@@ -330,7 +401,7 @@
         margin-top:50px;
       }
       .client{
-        border:1px solid red;
+
         .title{
           margin-top:55px;
         }
@@ -389,7 +460,7 @@
         }
       }
       .sector{
-        border:1px solid red;
+
         position: relative;
         padding:55px 0;
         .title{
@@ -446,7 +517,7 @@
         position: relative;
         padding:55px 0;
         background:#f4f4f4;
-        border:1px solid red;
+
         .title{
         }
         .article{
@@ -456,7 +527,7 @@
           line-height: 20px;
           text-align: center;
           .title{
-            border:1px solid red;
+
             display: flex;
             justify-content: center;
             align-items: center;
@@ -478,7 +549,68 @@
         }
 
       }
+      .cases{
+        position: relative;
+        padding:55px 0;
+        .article {
+          font-size: 14px;
+          width: 800px;
+          margin: 0 auto;
+          line-height: 20px;
+          text-align: center;
+        }
+        img{
+          margin-bottom:20px;
+        }
+      }
+      .report{
+        background:#f4f4f4;
+        position: relative;
+        padding:55px 0;
+        .content{
+          width:500px;
+          display: flex;
+          flex-direction: column;
+          margin:0 auto;
+          margin-top:40px;
+          justify-content: flex-start;
+          color:#676a6c;
+          position: relative;
+          .item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            margin-bottom:20px;
+            .down{
+              cursor: pointer;
+              position: absolute;
+              right:0;
+              top:0;
+            }
+          }
 
+        }
+      }
+      .link{
+        position: relative;
+        padding:55px 0;
+        .content{
+          width:800px;
+          display: flex;
+          flex-direction: row;
+          margin:0 auto;
+          margin-top:40px;
+          justify-content: space-between;
+          position: relative;
+          img{
+            width:110px;
+            height:30px;
+          }
+
+        }
+      }
     }
     footer{
 
