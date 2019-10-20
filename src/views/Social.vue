@@ -67,41 +67,69 @@
         <div class="content">
             <div class="top">
               <div class="left">
-                <svg class="icon industry" aria-hidden="true">
-                  <use xlink:href="#icon-ai-connection"></use>
-                </svg>
-                <div class="blue-green">基于计算机仿真模拟的选举预测平台</div>
-                <div>选举必定产生大量的数据，基于社会科学家对选举的理解，计算社会科学就有可能基于这些大数据构建模拟选举结果，包括不同选举策略下的计算机模拟平台。而我们的计算机模拟平台完全不依赖民意调查。</div>
+                <div >
+                  <svg class="icon industry" aria-hidden="true">
+                    <use xlink:href="#icon-laba"></use>
+                  </svg>
+                </div>
+                <div class="blue-green margin-top-10 margin-bottom-10">基于计算机仿真模拟的选举预测平台</div>
+                <div class="grey left ">选举必定产生大量的数据，基于社会科学家对选举的理解，计算社会科学就有可能基于这些大数据构建模拟选举结果，包括不同选举策略下的计算机模拟平台。而我们的计算机模拟平台完全不依赖民意调查。</div>
               </div>
               <img src="../assets/social/1571548568806.gif" alt="">
 
               <div class="right">
-                <svg class="icon industry" aria-hidden="true">
-                  <use xlink:href="#icon-ai-connection"></use>
-                </svg>
-                <div class="blue-green">政变风险预测及防范平台</div>
-                <div>任何一个政权和领导人的首要任务之一是维持政权的稳定。但是，世界从未真正太平过，政变时常发生。如何甄别政变的危险并且防范政变因此成为一个重要的考量。基于社会网络分析和计算机模拟，我们已经开发完成具有自主知识产权的预测及防范平台。</div>
+                <div>
+                  <svg class="icon industry" aria-hidden="true">
+                    <use xlink:href="#icon-feiji"></use>
+                  </svg>
+                </div>
+                <div class="blue-green margin-top-10 margin-bottom-10">政变风险预测及防范平台</div>
+                <div class="grey desc">任何一个政权和领导人的首要任务之一是维持政权的稳定。但是，世界从未真正太平过，政变时常发生。如何甄别政变的危险并且防范政变因此成为一个重要的考量。基于社会网络分析和计算机模拟，我们已经开发完成具有自主知识产权的预测及防范平台。</div>
               </div>
 
             </div>
             <div class="bottom">
-              <svg class="icon industry" aria-hidden="true">
-                <use xlink:href="#icon-ai-connection"></use>
-              </svg>
-              <div class="blue-green">内战风险及结果预测平台</div>
-              <div>任何一个政权和领导人的首要任务之一是维持政权的稳定。但是，世界从未真正太平过，政变时常发生。如何甄别政变的危险并且防范政变因此成为一个重要的考量。基于社会网络分析和计算机模拟，我们已经开发完成具有自主知识产权的预测及防范平台。</div>
+              <div>
+                <svg class="icon industry" aria-hidden="true">
+                  <use xlink:href="#icon-zhadan"></use>
+                </svg>
+              </div>
+              <div class="blue-green margin-top-10 margin-bottom-10">内战风险及结果预测平台</div>
+              <div class="grey desc">任何一个政权和领导人的首要任务之一是维持政权的稳定。但是，世界从未真正太平过，政变时常发生。如何甄别政变的危险并且防范政变因此成为一个重要的考量。基于社会网络分析和计算机模拟，我们已经开发完成具有自主知识产权的预测及防范平台。</div>
             </div>
         </div>
       </div>
-      <!--<div class="link">-->
-        <!--<Title :title="titles[6]" class="title"></Title>-->
-        <!--<div class="content">-->
-          <!--<li><a href="http://www.scientistin.com/" target="_blank"><img src="../assets/industry/link/logonew.png" alt=""></a></li>-->
-          <!--<li><a href="http://cig.ccxe.com.cn/index.html" target="_blank"><img src="../assets/industry/link/CIlogo.png" alt=""></a></li>-->
-          <!--<li><a href="http://cig.ccxe.com.cn/product.html" target="_blank"><img src="../assets/industry/link/logocebm.png" alt=""></a></li>-->
-          <!--<li><a href="http://www.koncen.com/" target="_blank"><img src="../assets/industry/link/kangsheng.png" alt=""></a></li>-->
-        <!--</div>-->
-      <!--</div>-->
+      <div class="cases">
+        <Title :title="titles[3]" class="title"></Title>
+        <div class="content">
+          <div class="top">
+            <div class="text">
+              <p class="blue-green margin-bottom-10">阿富汗内战结局的计算机模拟</p>
+              <p class="grey bolder left margin-bottom-10">基于我们的计算机模拟平台、利用公开可获得数据，课题组模拟了前苏联从阿富汗撤军后，阿富汗内战有可能出现的结果。我们通过引入地理、气候、经济、人口、军力等宏观数据，同时模拟内战中的8支主要力量选择不同的交战和结盟战略，通过300-500次以上的计算机模拟，得出了具有不同可能性的阿富汗内战过程与结局。</p>
+              <p class="grey bolder left margin-bottom-10">我们的结果表明，塔利班有75-85%以上的机会将会赢得内战。实际的最终结果与我们的预测完全一致。</p>
+              <p class="grey bolder left margin-bottom-10">上述案例充分表明了利用大数据和复杂决策分析方法的及时性、科学性和可靠性，这将为政府决策提供有力的理论借鉴和实证支撑。</p>
+            </div>
+            <img src="../assets/social/afuhan.png" alt="">
+          </div>
+          <div class="bottom">
+            <img src="../assets/social/vote.png" alt="">
+            <div class="text">
+                <p class="blue-green">台湾地区2016年选局预测</p>
+                <p class="grey bolder left margin-bottom-10">基于我们的选举结果模拟平台，完全不依赖民意调查，我们系统性地预测了台湾地区的选举结果。</p>
+                <p class="grey bolder left margin-bottom-10">在我国台湾地区的“领导人”和“立法院”选举之前10天，我们公布了我们的计算机模拟预测结果。而最终的选举结果表明，我们的预测是相当成功的。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="link">
+        <Title :title="titles[4]" class="title"></Title>
+        <div class="content">
+          <li><a href="http://www.scientistin.com/" target="_blank"><img src="../assets/industry/link/logonew.png" alt=""></a></li>
+          <li><a href="http://cig.ccxe.com.cn/index.html" target="_blank"><img src="../assets/industry/link/CIlogo.png" alt=""></a></li>
+          <li><a href="http://cig.ccxe.com.cn/product.html" target="_blank"><img src="../assets/industry/link/logocebm.png" alt=""></a></li>
+          <li><a href="http://www.koncen.com/" target="_blank"><img src="../assets/industry/link/kangsheng.png" alt=""></a></li>
+        </div>
+      </div>
     </main>
     <footer>
       <Footer :title="titles[titles.length-1]"></Footer>
@@ -300,9 +328,9 @@
 
       }
       .applications{
-        background:#f4f4f4;
         position: relative;
         padding:55px 0;
+        background:#f4f4f4;
         .content{
           width:1000px;
           display: flex;
@@ -329,9 +357,11 @@
         }
       }
       .services{
-
         position: relative;
         padding:55px 0;
+        font-size:14px;
+        font-weight:600;
+        line-height: 20px;
         .title{
         }
         .content{
@@ -347,88 +377,95 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: flex-start;
+            .left{
+              width:250px;
+              >div:nth-child(1){
+                text-align: center;
+              }
+              >div:nth-child(2){
+                text-align: center;
+              }
+            }
+            .right{
+              width:250px;
+              >div:nth-child(1){
+                text-align: center;
+              }
+              >div:nth-child(2){
+                text-align: center;
+              }
+            }
+
           }
-        }
-
-      }
-      .services{
-        position: relative;
-        padding:55px 0;
-        background:#f4f4f4;
-
-        .title{
-        }
-        .article{
-          font-size:14px;
-          width:800px;
-          margin:0 auto;
-          line-height: 20px;
-          text-align: center;
-          .title{
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-top:30px;
-            margin-bottom:20px;
-            .industry{
-              fill:#53b095;
-              width:40px;
-              height:40px;
-              margin-bottom:10px;
+          .bottom{
+            width:300px;
+            margin:0 auto;
+            margin-top:20px;
+            >div:nth-child(1){
+              text-align: center;
+            }
+            >div:nth-child(2){
+              text-align: center;
             }
           }
-
           img{
-            margin-bottom:20px;
+            width:400px;
           }
-
+          .industry{
+            width:40px;
+            height:40px;
+            fill:#53b095;
+          }
         }
 
       }
       .cases{
         position: relative;
         padding:55px 0;
-        .article {
+        background:#f4f4f4;
+        .content {
           font-size: 14px;
-          width: 800px;
+          width: 1000px;
+
           margin: 0 auto;
+          margin-top:20px;
           line-height: 20px;
-          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .top{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width:100%;
+            margin-bottom:20px;
+            .text{
+              width:600px;
+              >p:nth-child(1){
+                font-size:16px;
+              }
+            }
+          }
+          .bottom{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width:100%;
+            margin-bottom:20px;
+            .text{
+              width:600px;
+              >p:nth-child(1){
+                font-size:16px;
+              }
+            }
+          }
         }
         img{
           margin-bottom:20px;
-        }
-      }
-      .report{
-        background:#f4f4f4;
-        position: relative;
-        padding:55px 0;
-        .content{
-          width:500px;
-          display: flex;
-          flex-direction: column;
-          margin:0 auto;
-          margin-top:40px;
-          justify-content: flex-start;
-          color:#676a6c;
-          position: relative;
-          .item {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-start;
-            position: relative;
-            margin-bottom:20px;
-            .down{
-              cursor: pointer;
-              position: absolute;
-              right:0;
-              top:0;
-            }
-          }
-
+          width:350px;
         }
       }
       .link{
