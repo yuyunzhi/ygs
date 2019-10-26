@@ -1,56 +1,58 @@
 <template>
     <div class="wrapper">
-        <header>
+        <header class="header">
             <Sticky :distance="distance" class="sticky">
-                <div class="log">
-                    <span>奕格思</span>
-                    <span>战略咨询</span>
-                </div>
-                <div class="sider-bar">
-                    <ul >
-                        <li @click="gotoIndexPage">首页</li>
-                    </ul>
+                <div :class="{'sticky-wrapper':true,'active':activeHeader}">
+                    <div class="log" @click="gotoIndexPage">
+                        <span>ICSSAI</span>
+                        <span>Consulting</span>
+                    </div>
+                    <div class="sider-bar">
+                        <ul>
+                            <li @click="scrollServe('header',0)">Home</li>
+                        </ul>
+                    </div>
                 </div>
             </Sticky>
             <Swiper :picture="picture"></Swiper>
             <div class="content">
-                <div>财富和权力驱动了人类社会 </div>
-                <div>获取及维持财富和权力均需要战略头脑</div>
-                <div>基于计算社会科学</div>
-                <div>弈格思致力于助力客户的战略决策</div>
+                <div>Wealth and power drive human society.</div>
+                <div>Acquiring and maintaining wealth and power require strategic thinking.</div>
+                <div>By applying computational social science (CSS),</div>
+                <div>ICSSAI is committed to helping clients make strategic decisions.</div>
             </div>
-            <span class="more" @click="gotoIndustryPage">了解更多</span>
+            <span class="more" @click="gotoIndustryPage">To Know More</span>
         </header>
 
         <main>
             <div class="introduce">
                 <Title :title="titles[0]" class="title"></Title>
                 <div class="content">
-                    在经过充分的准备和筹划之后，于2018年7月开始，“弈格思战略咨询”启动了对中国部分产业的系统性研究。此研究的主要目标是：通过系统性地考察中国的一些重要产业，对于这些产业的整体概况和数据特征进行研究，从而能够对我国产业发展政策的效用进行基于理论和实证的评估。 经过一年的努力，我们第一阶段的研究目标已经基本达成，研究将进入下一个阶段。
+                    After careful preparation and planning, starting in July 2018, “ICSSAI Strategic Consulting” initiated a systematic study of several industries in China. The main objective of this research is to systematically examine key industries in China and to study the overall situation and data features of these industries so as to be able to make theoretical and empirical evaluations of the effectiveness of China's industrial development policies. After a year of hard work, our research goals of the first phase have been achieved, and our research is progressing through the second stage.
                     <br><br>
-                    在第一阶段的研究中，我们发展出了一套基于高级数据可视化和统计分析技巧的研究框架，从而能够让我们发现初级统计分析所不能捕捉到的产业内部影响因素。同时，我们还对每一个产业的几家重点或典型企业进行了比较深入的个案研究。
+                    In the first phase of our study, we developed a research framework based on advanced data visualization and statistical analysis techniques that allowed us to identify factors within the industry that were not captured by primary statistical analysis. At the same time, we have conducted in-depth case studies on several key or typical companies in each industry.
                     <br><br>
-                    通过完成第一阶段的研究任务，我们组建并训练了一支拥有高级数据处理和分析能力，并且对于特定产业有了一定了解的研究团队。在研究的过程中，我们的团队也积累了更加多样化的数据方法和可视化技巧。
+                    While completing the first phase of the research mission, we organized and trained a research team capable of advanced data processing and analysis capabilities with an in-depth understanding of specific industries. During the process of the research, our team has also accumulated more diverse data methods and visualization techniques.
                 </div>
                 <div class="content bolder">
-                    迄今为止，我们已经完成或即将完成了对8个行业的第一阶段的研究，这8个行业是：机械、汽车整车、汽车零配件、房地产、食品+乳制品、家电、医药，以及电子。我们还将在未来的几个月完成对化工行业和农业的研究报告。
+                    So far, we have completed or are about to complete the first phase of research in eight industries: machinery, automotive vehicles, auto parts, real estate, food and dairy products, home appliances, medicine, and electronics. We will also complete research reports on the chemical industry and agriculture in the coming months.
                 </div>
                 <div class="content bolder">
-                    图一：我们的产业研究布局
+                    Our industrial research layout
                     <br><br>
                 </div>
                 <img src="../assets/news/jinzhanbaogao.png" alt="">
                 <br><br>
                 <div class="content bolder">
-                    （ <span class="red">红圈</span>标注的产业为已经完成或即将完成研究的产业，<span class="blue"蓝圈</span>标注的产业为正在进行研究的产业。）
+                    (The industries <span class="red">marked by the red circle </span>are the industries in which we have completed or are about to complete research, and the industries<span class="blue"> marked by the blue circles </span>are the industries under study.)
                 </div>
                 <div class="content">
-                    对我们的研究感兴趣的读者，请从“弈格思战略咨询”的官方网页上下载我们已经完成的产业研究报告摘要。
+                    For readers interested in our research, please download the summary of our completed industry research report from our website.
                     <br><br>
-                    从2019年8月开始，我们的产业研究将进入下一阶段。在这一个阶段，我们将通过更加高级的产业经济学的研究方法，量化我国目前上述重要产业的发展状况，并将其与世界领先国家进行对比，找出我国在生产技术、产品质量、企业规模甚至企业经营管理等方面与世界领先国家的差距；度量这些产业在全球产业链中的地位的变迁，为我国相关产业的发展，特别产业政策制定、产业升级方面提供更为精准的参考。
+                    As of August 2019, our industrial research has entered the next stage. At this stage, we will quantify the state of development for China's current important industries through more advanced industrial economics research methods and compare it with the world's leading countries to find out the extent of the gap in production technology, product quality, and enterprise scale between China and other countries. Measuring the changes in the status of these industries in the global industrial chain provides a more accurate reference for the development of China's related industries, special industrial policy formulation and industrial upgrading.
                 </div>
                 <div class="content bolder">
-                    我们热诚欢迎上述产业中的企业、投资机构、以及地方政府联系我们!
+                    We sincerely welcome companies, investment institutions and local governments in these industries to contact us!
                 </div>
             </div>
         </main>
@@ -74,27 +76,89 @@
                 ],
                 titles:[
                     {
-                        chineseName:'产业研究：一年进展报告',
-                        // englishName:'Contact us',
+                        englishName:'Industrial Research: Progress Update',
                     },
                     {
-                        chineseName:'联系我们',
-                        englishName:'Contact us',
+                        englishName:'Contact Us',
                     },
 
-                ]
+                ],
+                currentScrollTop:0,
+                activeHeader:false
             }
         },
+        watch:{
+            currentScrollTop(n){
+                // console.log('watch',n);
+                if (n > 2) {
+                    this.activeHeader = true
+                } else {
+                    this.activeHeader = false
+                }
+
+            }
+        },
+        mounted(){
+            // console.log('news.scrollTop',document.documentElement.scrollTop  );
+            window.scroll(0,1)
+            this.tweenAni();
+
+            window.addEventListener("scroll",  this.scrollMethod)
+        },
+        destroyed(){
+            window.removeEventListener('scroll',this.scrollMethod)
+        },
         methods:{
+            scrollMethod(){
+                // console.log(document.documentElement.scrollTop);
+                this.currentScrollTop = document.documentElement.scrollTop;
+                this.updateHeight()
+            },
+            updateHeight(){
+                this.header = document.getElementsByClassName('header')[0].offsetTop
+
+            },
+            // TweenJs 动画监听
+            tweenAni () {
+                requestAnimationFrame(this.tweenAni);
+                TWEEN.update(); // ================================= 关键是这句
+            },
+            scrollServe(block,scroll){
+                let start
+                let end
+                // console.log(this.service);
+                let currentScrollTop = this.currentScrollTop
+                console.log(currentScrollTop,this[block]);
+                start = currentScrollTop
+                end=this[block]+scroll
+                this.scrollPage(start,end)
+            },
+            scrollPage(start,end){
+                console.log('start:', start);
+                console.log('end:', end);
+                // 稍后
+                let AppScrollTopNow = {
+                        y: start
+                    }, // ================================= 定义一个初始位置
+                    AppScrollTopEnd = {
+                        y: end
+                    } ;// ================================= 定义一个结束位置
+
+                // 设置新的缓动动画
+                new TWEEN.Tween(AppScrollTopNow) // 传入开始位置
+                    .to(AppScrollTopEnd, 600) // 指定时间内完成结束位置
+                    .easing(TWEEN.Easing.Quadratic.Out) // 缓动方法名
+                    .onUpdate(() => {
+                        // 上面的值更新时执行的设置
+                        document.documentElement.scrollTop = AppScrollTopNow.y;
+                        document.body.scrollTop = AppScrollTopNow.y;
+                    })
+                    .start();// ================================= 不要忘了合适的时候启动动画
+
+            },
             gotoIndustryPage(){
                 this.$router.push("/industry")
             },
-            // gotoNewsPage(){
-            //     this.$router.push("/news")
-            // },
-            // gotoSocialPage(){
-            //     this.$router.push("/social")
-            // },
             gotoIndexPage(){
                 this.$router.push("/")
             },
@@ -125,51 +189,67 @@
                 z-index: 10;
                 width:100%;
                 height:70px;
-                border:1px solid red;
-                .log{
-                    width:96px;
+                .sticky-wrapper{
+                    width:100%;
                     height:70px;
-                    background:#53b095;
-                    border-radius:5px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    position: absolute;
-                    top:0;
-                    left:226px;
-                    cursor: pointer;
-                    &:hover{
-                        background-color: #179d82;
-                        border-color: #179d82;
-                    }
-
-                    >span{
-                        color:white;
-                        font-size:14px;
-                        font-weight:bolder;
-                        line-height: 20px;
-
-                    }
-                }
-                .sider-bar{
-                    position:absolute;
-                    top:30px;
-                    right:238px;
-                    ul{
+                    .log{
+                        width:96px;
+                        height:70px;
+                        background:#53b095;
+                        border-radius:5px;
                         display: flex;
-                        flex-direction: row;
-                        li{
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        top:0;
+                        left:226px;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: #179d82;
+                            border-color: #179d82;
+                        }
+
+                        >span{
+                            color:white;
                             font-size:14px;
                             font-weight:bolder;
-                            color:white;
-                            margin-left:20px;
-                            cursor: pointer;
-                            &:hover{
-                                color::#53b095;
+                            line-height: 20px;
+
+                        }
+                    }
+                    .sider-bar{
+                        position:absolute;
+                        top:30px;
+                        right:238px;
+                        ul{
+                            display: flex;
+                            flex-direction: row;
+                            li{
+                                font-size:14px;
+                                font-weight:bolder;
+                                color:white;
+                                margin-left:20px;
+                                cursor: pointer;
+                                &:hover{
+                                    color:#53b095;
+                                }
                             }
                         }
                     }
+
+                    &.active{
+                        background:white;
+                        .sider-bar{
+                            li{
+                                color:#676a6c;
+                            }
+
+                        }
+
+                        z-index:999;
+                    }
+
                 }
 
             }
@@ -183,19 +263,19 @@
                 top:345px;
                 left:50%;
                 transform: translateX(-50%);
-                z-index: 11;
+                z-index: 1;
                 border-radius:5px;
+                cursor: pointer;
             }
             .content{
-                width:100%;
-                border:1px solid red;
+                width:80%;
                 position: absolute;
                 top:170px;
                 left:50%;
                 font-size:32px;
                 font-weight:500;
                 color:white;
-                z-index: 11;
+                z-index: 1;
                 transform: translateX(-50%);
                 text-align: center;
                 line-height: 40px;

@@ -474,6 +474,7 @@
         transform: translateX(-50%);
         z-index: 1;
         border-radius:5px;
+        cursor: pointer;
       }
       .content{
         width:100%;

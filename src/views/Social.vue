@@ -384,6 +384,7 @@
                 transform: translateX(-50%);
                 z-index: 11;
                 border-radius: 5px;
+                cursor: pointer;
             }
 
             .content {
