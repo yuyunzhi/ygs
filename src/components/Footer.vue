@@ -31,11 +31,11 @@
         data(){
             return{
                 footerInfo:{
-                    companyName:'上海弈格思商务信息咨询有限公司',
-                    road:'上海 杨浦区 国泰路',
-                    location:'复旦科技园内',
+                    companyName:'Shanghai ICSSAI Strategic Consulting Co. Ltd',
+                    road:'Guotai Road, Yangpu District Shanghai',
+                    location:'Fudan Science and Technology Park',
                     email:'email : info@icssai-consulting.com',
-                    at:'© 2017 上海弈格思商务信息咨询有限公司',
+                    at:'© 2017 Shanghai ICSSAI Strategic Consulting Co. Ltd',
                     net1:'沪公网安备31011002003651号',
                     net2:'沪ICP备18005414号'
                 }

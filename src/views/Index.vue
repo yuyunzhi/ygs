@@ -1,18 +1,18 @@
 <template>
     <div class="index-wrapper" ref="index">
-        <header>
+        <header class="header">
             <Sticky :distance="distance" class="sticky" >
                 <div :class="{'sticky-wrapper':true,'active':activeHeader}">
                     <div class="log">
-                        <span>奕格思</span>
-                        <span >战略咨询</span>
+                        <span>ICSSAI</span>
+                        <span >Consulting</span>
                     </div>
                     <div class="sider-bar">
                         <ul >
-                            <li @click="gotoIndexPage">首页</li>
-                            <li @click="scrollServe">服务</li>
-                            <li >公司简介</li>
-                            <li>联系我们</li>
+                            <li @click="scrollServe('header',0)">Home</li>
+                            <li @click="scrollServe('service',350)">Service</li>
+                            <li @click="scrollServe('introduce',350)">Company Profile</li>
+                            <li @click="scrollServe('contact',350)">Contact Us</li>
                         </ul>
                     </div>
                 </div>
@@ -20,43 +20,43 @@
             </Sticky>
             <Swiper :picture="picture"></Swiper>
             <div class="content">
-                <div>财富和权力驱动了人类社会 </div>
-                <div>获取及维持财富和权力均需要战略头脑</div>
-                <div>基于计算社会科学</div>
-                <div>弈格思致力于助力客户的战略决策</div>
+                <div>Wealth and power drive human society.</div>
+                <div>Acquiring and maintaining wealth and power require strategic thinking.</div>
+                <div>By applying computational social science (CSS),</div>
+                <div>ICSSAI is committed to helping clients make strategic decisions.</div>
             </div>
-            <span class="more" @click="gotoIndustryPage">了解更多</span>
+            <span class="more" @click="gotoIndustryPage">To Know More</span>
         </header>
 
         <main>
-            <div class="news" id="id">
+            <div class="news">
                 <Title :title="titles[0]" class="title"></Title>
                 <div class="content">
-                    <div class="report" @click="gotoNewsPage">产业研究：一年进展报告</div>
-                    <div class="jd" >招聘产业项目经理</div>
+                    <div class="report" @click="gotoNewsPage">Industrial research: One-year progress report</div>
+                    <div class="jd" >Hiring industrial project manager</div>
                 </div>
             </div>
             <div class="decision">
                 <Title :title="titles[1]" class="title"></Title>
                 <div class="content">
                     <div class="challenge">
-                        <div class="en-title">challenge</div>
-                        <div class="ch-title">挑战
+                        <div class="en-title">Challenges</div>
+                        <div class="ch-title">
                             <img src="../assets/logo.png" alt="">
                         </div>
                         <ul class="list">
-                            <li>对所有的决策者来说，两个最大的挑战是信息的缺乏以及处理信息的能力。 在相当长的时间里，这两个挑战都是无解的。</li>
-                            <li>因此，传统的决策咨询几乎完全依赖专家判断。由于缺乏足够强大的计算能力、众多数据的缺失，加上社会科学理论和实证研究的积累不够，决策者在很多时候只能依赖于专家判断。 传统的决策咨询是一个前信息革命时代的产物。这样的决策模式将 很难有效应对现代国家和企业所面临的高度复杂和快速变化的环境。</li>
+                            <li>For all decision makers, the two biggest challenges are the lack of information and the lack of ability to process information. For a long time, these two challenges were insurmountable.</li>
+                            <li>As a result, traditional decision-making advice relies almost entirely on expert judgement. Due to a lack of computational ability and an absence of data, accompanied by an insufficient accumulation of social science theory and empirical research, policy makers can only rely on expert judgment in most cases. Traditional decision-making consultation is a product of the pre-information-revolution era. Such a decision-making model cannot effectively or accurately address the highly complex and rapidly changing environment faced by modern countries and businesses.</li>
                         </ul>
                     </div>
                     <div class="revolution">
-                        <div class="en-title">revolution</div>
-                        <div class="ch-title">革命
+                        <div class="en-title">Revolution</div>
+                        <div class="ch-title">
                             <img src="../assets/logo.png" alt="">
                         </div>
                         <ul class="list">
-                            <li> 计算社会科学将革命性地改变“决策科学”。计算社会科学为现代国家和现代企业提供了一个应对高度复杂和快速变化的环境的工具。</li>
-                            <li>计算社会科学（ CSS ）是社会科学和计算机技术的交叉学科。 它以社会科学的理论和实证研究为数理模型和程序设计提供核心和基础思想，以计算机技术、大数据、机器学习、和人工智能（AI）为核心技术平台，通过大规模计算和模拟，对我们关心的社会行为、事件进行推演和计算的科学。</li>
+                            <li> CSS will revolutionize “decision science.” It provides a tool for modern countries and modern businesses to respond to highly complex and rapidly changing environments.</li>
+                            <li>CSS is an interdisciplinary subject between social science and computer technology. It combines the core and basic ideas of mathematical models and programming with theoretical and empirical research of the social sciences. It uses computer technology, big data, machine learning, and artificial intelligence (AI) as its core technology platform. Through large-scale calculation and simulation, we are able to deduce and compute the social behaviors and events that we care about.</li>
                         </ul>
                     </div>
 
@@ -66,26 +66,26 @@
                 <Title :title="titles[2]" class="title"></Title>
                 <div class="content">
                     <div class="button">
-                        <div>经济</div>
-                        <div>企业、产业</div>
-                        <div @click="gotoIndustryPage">获取详情</div>
+                        <div>Wealth: </div>
+                        <div>Industries and Corporations</div>
+                        <div @click="gotoIndustryPage">To Know More</div>
                     </div>
                     <img src="../assets/afuhan.png" alt="">
                     <div class="button">
-                        <div>权力</div>
-                        <div>政治、社会</div>
-                        <div @click="gotoSocialPage">获取详情</div>
+                        <div>Power:</div>
+                        <div>Politics and Society</div>
+                        <div @click="gotoSocialPage">To Know More</div>
                     </div>
                 </div>
             </div>
             <div class="introduce">
                 <Title :title="titles[3]" class="title"></Title>
                 <div class="content">
-                    上海弈格思商务信息咨询有限公司是一家以“计算社会科学”为核心技术平台的战略咨询公司。弈格思取意于整合的（Integrated）CSS-AI的谐音。公司整合计算社会科学、计算机技术、大数据、人工智能及专家知识，构建了多个具有自主知识产权的，针对不同战略决策问题的智能战略决策计算机模拟系统和平台。基于这些计算机模拟系统和平台，公司能够将战略决策、战略行为、战略竞争结果以及战略风险模型化，基于计算机模拟仿真及预测，为客户提供科学和全面的战略分析、战略决策及战略竞争咨询，助力客户建立以“数据”为基础的科学化和模型化的决策体系。基于计算社会科学，“弈格思”将与客户并肩作战，为客户量身定制战略决策，协助客户创造可持续的价值收益。
+                    ICSSAI (integrated computational social science and artificial intelligence) is a strategic consulting company with CSS as its core technology platform.. The company integrates computational social science, computer technology, big data, artificial intelligence, and expert knowledge, using them to build a number of intelligent strategic decision-making computer simulation systems and platforms with independent intellectual property rights for different strategic decision-making problems. Based on these computer simulation systems and platforms, the company is able to model strategic decisions, strategic behaviors, strategic competition results, and strategic risks while providing customers with scientific and comprehensive strategic analysis, strategic decision-making, and strategic competition consulting. We help customers build a scientific and model-based decision-making system using data. Based on CSS, ICSSAI will work side by side with customers to tailor strategic decisions and help clients create sustainable profit.
                 </div>
             </div>
         </main>
-        <footer>
+        <footer class="contact">
             <Footer :title="titles[4]"></Footer>
         </footer>
 
@@ -105,37 +105,31 @@ export default {
             ],
             titles:[
                 {
-                    chineseName:'公司新闻',
-                    englishName:'Company News'
+                    englishName:'Company News',
                 },
                 {
-                    chineseName:'计算社会科学与即将到来的决策科学革命',
-                    englishName:'Revolution In Decision-Making',
-                    desc1:'财富和权力驱动了人类社会。获取及维持财富和权力均需要战略头脑。' ,
-                    desc2:'基于计算社会科学，弈格思致力于助力客户的战略决策。'
+                    englishName:'Revolution In Decision Making',
+                    desc1:'Wealth and power drive human society.Acquiring and maintaining wealth and power require strategic thinking.By applying computational social science (CSS), ICSSAI is committed to helping clients make strategic decisions.'
                 },
                 {
-                    chineseName:'尖端服务',
-                    englishName:'Our Great Services',
-                    desc1:'涵盖社会网络、企业战略模拟与管理、竞争战略优化、政治风险预测等多领域。' ,
+                    englishName:'Our Services',
+                    desc1:'Covers social networks, corporate strategy simulation and management, competitive strategy optimization, political risk prediction, and other fields.[This is not a complete sentence. What specifically covers social networks, etc.?]' ,
                 },
                 {
-                    chineseName:'公司简介',
                     englishName:'Company profile',
                 },
                 {
-                    chineseName:'联系我们',
                     englishName:'Contact us',
                 },
 
             ],
             currentScrollTop:0,
-            activeHeader:false
+            activeHeader:false,
         }
     },
     watch:{
         currentScrollTop(n){
-            console.log('watch',n);
+            // console.log('watch',n);
             if (n > 2) {
                 this.activeHeader = true
             } else {
@@ -146,53 +140,50 @@ export default {
     },
     mounted(){
         // console.log('news.scrollTop',document.documentElement.scrollTop  );
-        //this.tweenAni();
-        // let height = document.getElementsByClassName('news')[0].getBoundingClientRect().top
-        // console.log('news',height);
-        // this.decision = document.getElementsByClassName('decision')[0].getBoundingClientRect().y
-        // console.log('descion ',this.decision);
-        // this.service = document.getElementsByClassName('service')[0].getBoundingClientRect().y
-        // console.log('service ',this.service);
-        // this.introduce = document.getElementsByClassName('introduce')[0].getBoundingClientRect().y
-        // console.log('introduce ',this.introduce);
+        window.scroll(0,1)
+        this.tweenAni();
 
-        console.log('ref',this.$refs.index);
         window.addEventListener("scroll",  (e)=> {
-            //onsole.log(document.documentElement.scrollTop);
+            // console.log(document.documentElement.scrollTop);
             this.currentScrollTop = document.documentElement.scrollTop;
+            this.updateHeight()
 
-            // this.news = document.getElementsByClassName('news')[0].getBoundingClientRect()
-            console.log('currentScrollTop ',this.currentScrollTop );
-          // console.log( '当前滚动的距离' ,this.currentScrollTop);
-
-            // if(document.body.scrollHeight <= window.screen.height + document.body.scrollTop){
-            //
-            //     }
-        },false)
+        })
     },
     methods:{
+        updateHeight(){
+            this.header = document.getElementsByClassName('header')[0].offsetTop
+
+            this.news= document.getElementsByClassName('news')[0].offsetTop
+            // console.log('news',this.news);
+            // this.decision = document.getElementsByClassName('decision')[0].offsetTop
+            // console.log('descion ',this.decision);
+            this.service = document.getElementsByClassName('service')[0].offsetTop
+            //console.log('service ',this.service);
+            this.introduce = document.getElementsByClassName('introduce')[0].offsetTop
+            //console.log('introduce ',this.introduce)
+            this.contact = document.getElementsByClassName('contact')[0].offsetTop
+
+        },
         // TweenJs 动画监听
         tweenAni () {
             requestAnimationFrame(this.tweenAni);
             TWEEN.update(); // ================================= 关键是这句
         },
-        scrollServe(){
+        scrollServe(block,scroll){
             let start
             let end
             // console.log(this.service);
             let currentScrollTop = this.currentScrollTop
-            // console.log(currentScrollTop);
-            if(this.service > this.currentScrollTop){
-                start = this.currentScrollTop
-                end = this.service
-            }else{
-                start =this.service
-                end=this.currentScrollTop
-            }
+            console.log(currentScrollTop,this[block]);
+            start = currentScrollTop
+            end=this[block]+scroll
             this.scrollPage(start,end)
 
         },
         scrollPage(start,end){
+            console.log('start:', start);
+            console.log('end:', end);
             // 稍后
             let AppScrollTopNow = {
                     y: start
@@ -211,6 +202,7 @@ export default {
                     document.body.scrollTop = AppScrollTopNow.y;
                 })
                 .start();// ================================= 不要忘了合适的时候启动动画
+
         },
 
         gotoIndustryPage(){
@@ -223,7 +215,7 @@ export default {
             this.$router.push("/social/en")
         },
         gotoIndexPage(){
-            this.$router.push("/index/en")
+            this.$router.push("/en")
         }
     },
     components:{
@@ -276,7 +268,7 @@ export default {
 
                    >span{
                        color:white;
-                       font-size:14px;
+                       font-size:12px;
                        font-weight:bolder;
                        line-height: 20px;
 
@@ -392,7 +384,7 @@ export default {
                 justify-content:space-between;
                 margin:0 auto;
                 margin-top:62px;
-                align-items: center;
+                /*align-items: center;*/
                 width:1000px;
 
                 .challenge,
@@ -415,7 +407,7 @@ export default {
                             height:40px;
                             position: absolute;
                             right:0;
-                            top:-5px;
+                            top:-40px;
                      }
                     }
                     ul{

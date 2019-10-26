@@ -4,7 +4,6 @@ import Home from './views/Index.vue'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 
-
 Vue.use(Router)
 
 const router = new Router({
