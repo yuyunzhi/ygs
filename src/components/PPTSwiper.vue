@@ -30,13 +30,6 @@
 <script>
     export default {
         name: "PPTSwiper",
-        props:{
-            picture:{
-                type:Array,
-                default:()=>[],
-                required:true
-            },
-        },
         mounted() {
             this.initSwiper()
         },

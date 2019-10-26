@@ -247,6 +247,9 @@
                 this.$router.push("/")
 
             },
+            gotoIndexPage() {
+                this.$router.push("/")
+            },
 
         },
         components: {

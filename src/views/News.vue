@@ -96,6 +96,12 @@
                     this.activeHeader = false
                 }
 
+            },
+            $route: {
+                handler(newName, oldName) {
+                    console.log('$route has changed',newName,oldName);
+                },
+                deep: true
             }
         },
         mounted(){
