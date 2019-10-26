@@ -1,19 +1,22 @@
 <template>
-    <div class="wrapper">
+    <div class="index-wrapper" ref="index">
         <header>
-            <Sticky :distance="distance" class="sticky">
-                <div class="log">
-                    <span>奕格思</span>
-                    <span>战略咨询</span>
+            <Sticky :distance="distance" class="sticky" >
+                <div :class="{'sticky-wrapper':true,'active':activeHeader}">
+                    <div class="log">
+                        <span>奕格思</span>
+                        <span >战略咨询</span>
+                    </div>
+                    <div class="sider-bar">
+                        <ul >
+                            <li @click="gotoIndexPage">首页</li>
+                            <li @click="scrollServe">服务</li>
+                            <li >公司简介</li>
+                            <li>联系我们</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="sider-bar">
-                    <ul >
-                        <li>首页</li>
-                        <li>服务</li>
-                        <li>公司简介</li>
-                        <li>联系我们</li>
-                    </ul>
-                </div>
+
             </Sticky>
             <Swiper :picture="picture"></Swiper>
             <div class="content">
@@ -26,11 +29,11 @@
         </header>
 
         <main>
-            <div class="news">
+            <div class="news" id="id">
                 <Title :title="titles[0]" class="title"></Title>
                 <div class="content">
                     <div class="report" @click="gotoNewsPage">产业研究：一年进展报告</div>
-                    <a class="jd" target="_blank" href="xiangmujingli.pdf">招聘产业项目经理</a>
+                    <div class="jd" >招聘产业项目经理</div>
                 </div>
             </div>
             <div class="decision">
@@ -59,7 +62,7 @@
 
                 </div>
             </div>
-            <div class="service">
+            <div class="service" id="d3">
                 <Title :title="titles[2]" class="title"></Title>
                 <div class="content">
                     <div class="button">
@@ -96,9 +99,9 @@ export default {
         return{
             distance:0,
             picture:[
-                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570982223814&di=e9b6f1bbf8e1fce5c69ed6b856cd4fb1&imgtype=0&src=http%3A%2F%2Fpic27.nipic.com%2F20130321%2F9678987_225139671149_2.jpg",
-                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570982223814&di=00702d8d6d520502312948a4b39a646b&imgtype=0&src=http%3A%2F%2Fpic16.nipic.com%2F20111006%2F6239936_092702973000_2.jpg",
-                "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570982223814&di=5e57473e3840dfdc7a71fc4b18549629&imgtype=0&src=http%3A%2F%2Fpic25.nipic.com%2F20121112%2F9252150_150552938000_2.jpg"
+                require("../assets/land/header_one_1.png"),
+                require("../assets/land/header_one_2.png"),
+                require("../assets/land/header_one_3.png")
             ],
             titles:[
                 {
@@ -125,18 +128,102 @@ export default {
                     englishName:'Contact us',
                 },
 
-            ]
+            ],
+            currentScrollTop:0,
+            activeHeader:false
         }
     },
+    watch:{
+        currentScrollTop(n){
+            console.log('watch',n);
+            if (n > 2) {
+                this.activeHeader = true
+            } else {
+                this.activeHeader = false
+            }
+
+        }
+    },
+    mounted(){
+        // console.log('news.scrollTop',document.documentElement.scrollTop  );
+        //this.tweenAni();
+        // let height = document.getElementsByClassName('news')[0].getBoundingClientRect().top
+        // console.log('news',height);
+        // this.decision = document.getElementsByClassName('decision')[0].getBoundingClientRect().y
+        // console.log('descion ',this.decision);
+        // this.service = document.getElementsByClassName('service')[0].getBoundingClientRect().y
+        // console.log('service ',this.service);
+        // this.introduce = document.getElementsByClassName('introduce')[0].getBoundingClientRect().y
+        // console.log('introduce ',this.introduce);
+
+        console.log('ref',this.$refs.index);
+        window.addEventListener("scroll",  (e)=> {
+            //onsole.log(document.documentElement.scrollTop);
+            this.currentScrollTop = document.documentElement.scrollTop;
+
+            // this.news = document.getElementsByClassName('news')[0].getBoundingClientRect()
+            console.log('currentScrollTop ',this.currentScrollTop );
+          // console.log( '当前滚动的距离' ,this.currentScrollTop);
+
+            // if(document.body.scrollHeight <= window.screen.height + document.body.scrollTop){
+            //
+            //     }
+        },false)
+    },
     methods:{
+        // TweenJs 动画监听
+        tweenAni () {
+            requestAnimationFrame(this.tweenAni);
+            TWEEN.update(); // ================================= 关键是这句
+        },
+        scrollServe(){
+            let start
+            let end
+            // console.log(this.service);
+            let currentScrollTop = this.currentScrollTop
+            // console.log(currentScrollTop);
+            if(this.service > this.currentScrollTop){
+                start = this.currentScrollTop
+                end = this.service
+            }else{
+                start =this.service
+                end=this.currentScrollTop
+            }
+            this.scrollPage(start,end)
+
+        },
+        scrollPage(start,end){
+            // 稍后
+            let AppScrollTopNow = {
+                    y: start
+                }, // ================================= 定义一个初始位置
+                AppScrollTopEnd = {
+                    y: end
+                } ;// ================================= 定义一个结束位置
+
+            // 设置新的缓动动画
+            new TWEEN.Tween(AppScrollTopNow) // 传入开始位置
+                .to(AppScrollTopEnd, 600) // 指定时间内完成结束位置
+                .easing(TWEEN.Easing.Quadratic.Out) // 缓动方法名
+                .onUpdate(() => {
+                    // 上面的值更新时执行的设置
+                    document.documentElement.scrollTop = AppScrollTopNow.y;
+                    document.body.scrollTop = AppScrollTopNow.y;
+                })
+                .start();// ================================= 不要忘了合适的时候启动动画
+        },
+
         gotoIndustryPage(){
-            this.$router.push("/industry")
+            this.$router.push("/industry/en")
         },
         gotoNewsPage(){
-            this.$router.push("/news")
+            this.$router.push("/news/en")
         },
         gotoSocialPage(){
-            this.$router.push("/social")
+            this.$router.push("/social/en")
+        },
+        gotoIndexPage(){
+            this.$router.push("/index/en")
         }
     },
     components:{
@@ -153,7 +240,7 @@ export default {
 
 <style scoped lang="scss">
 
-.wrapper{
+.index-wrapper{
     width: 100vw;
     position: relative;
     header{
@@ -165,52 +252,70 @@ export default {
             z-index: 10;
             width:100%;
             height:70px;
-            border:1px solid red;
-            .log{
-                width:96px;
-                height:70px;
-                background:#53b095;
-                border-radius:5px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                position: absolute;
-                top:0;
-                left:226px;
-                cursor: pointer;
-                &:hover{
-                    background-color: #179d82;
-                    border-color: #179d82;
-                }
 
-                >span{
-                    color:white;
-                    font-size:14px;
-                    font-weight:bolder;
-                    line-height: 20px;
+           .sticky-wrapper{
+               width:100%;
+               height:70px;
+               .log{
+                   width:96px;
+                   height:70px;
+                   background:#53b095;
+                   border-radius:5px;
+                   display: flex;
+                   flex-direction: column;
+                   justify-content: center;
+                   align-items: center;
+                   position: absolute;
+                   top:0;
+                   left:226px;
+                   cursor: pointer;
+                   &:hover{
+                       background-color: #179d82;
+                       border-color: #179d82;
+                   }
 
-                }
-            }
-            .sider-bar{
-                position:absolute;
-                top:30px;
-                right:238px;
-                ul{
-                    display: flex;
-                    flex-direction: row;
-                    li{
-                        font-size:14px;
-                        font-weight:bolder;
-                        color:white;
-                        margin-left:20px;
-                        cursor: pointer;
-                        &:hover{
-                            color:#53b095;
-                        }
-                    }
-                }
-            }
+                   >span{
+                       color:white;
+                       font-size:14px;
+                       font-weight:bolder;
+                       line-height: 20px;
+
+                   }
+               }
+               .sider-bar{
+                   position:absolute;
+                   top:30px;
+                   right:238px;
+                   ul{
+                       display: flex;
+                       flex-direction: row;
+                       li{
+                           font-size:14px;
+                           font-weight:bolder;
+                           color:white;
+                           margin-left:20px;
+                           cursor: pointer;
+                           &:hover{
+                               color:#53b095;
+                           }
+                       }
+                   }
+               }
+
+               &.active{
+                   background:white;
+                   .sider-bar{
+                       li{
+                           color:#676a6c;
+                       }
+
+                   }
+
+                   z-index:999;
+               }
+
+           }
+
 
         }
         .more{
@@ -223,19 +328,19 @@ export default {
             top:345px;
             left:50%;
             transform: translateX(-50%);
-            z-index: 11;
+            z-index: 1;
             border-radius:5px;
+            cursor: pointer;
         }
         .content{
-            width:100%;
-            border:1px solid red;
+            width:70%;
             position: absolute;
             top:170px;
             left:50%;
             font-size:32px;
             font-weight:500;
             color:white;
-            z-index: 11;
+            z-index: 1;
             transform: translateX(-50%);
             text-align: center;
             line-height: 40px;

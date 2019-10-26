@@ -12,22 +12,22 @@ const router = new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
+      path: '/index/en',
       name: 'home',
       component: Home
     },
     {
-      path: '/industry',
+      path: '/industry/en',
       name: 'industry',
       component: ()=>import('@/views/Industry.vue')
     },
     {
-      path: '/social',
+      path: '/social/en',
       name: 'social',
       component: ()=>import('@/views/Social.vue')
     },
     {
-      path: '/news',
+      path: '/news/en',
       name: 'news',
       component: ()=>import('@/views/News.vue')
     },

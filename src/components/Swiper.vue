@@ -1,14 +1,14 @@
 <template>
     <div>
         <div class="swiper-container" v-if="picture.length>1">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper" >
                 <div class="swiper-slide" v-for="(item,index) in picture" :key="index+'ccc'" >
                     <img :src="item"
                          alt="">
                 </div>
             </div>
             <!-- 如果需要分页器 -->
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination" ></div>
 
             <!-- 如果需要导航按钮 -->
             <div class="swiper-button-prev">
@@ -41,12 +41,13 @@
         },
         mounted() {
             this.initSwiper()
+
         },
         methods: {
             initSwiper() {
                 var mySwiper = new Swiper('.swiper-container', {
-                    direction: 'horizontal', // 垂直切换选项
-                    loop: this.picture.length>1, // 循环模式选项
+                    direction: 'horizontal', //  水平切换选项
+                    loop: true, // 循环模式选项
 
                     // 如果需要分页器
                     pagination: {
@@ -60,10 +61,6 @@
                         prevEl: '.swiper-button-prev',
                     },
 
-                    // 如果需要滚动条
-                    scrollbar: {
-                        el: '.swiper-scrollbar',
-                    },
                 })
             }
         },
@@ -71,62 +68,7 @@
 </script>
 
 <style scoped lang="scss">
-    .swiper-pagination.swiper-pagination-bullets{
-        bottom: 20px;
-        .swiper-pagination-bullet{
-            border:1px solid white;
-            width: 12px;
-            height: 12px;
-        }
-        .swiper-pagination-bullet.swiper-pagination-bullet-active{
-            border:1px solid white;
-            background:white;
-            width: 12px;
-            height: 12px;
-        }
-    }
 
-    .swiper-button-prev{
-        width: 40px;
-        height: 40px;
-
-        .icon{
-            fill:#9b969b;
-            width: 40px;
-            height: 40px;
-            &:hover{
-                fill:white;
-            }
-        }
-        &::after{
-            display: none;
-        }
-    }
-
-    .swiper-button-next{
-        margin-right:20px;
-        width: 40px;
-        height: 40px;
-        .icon{
-            width: 40px;
-            height: 40px;
-            fill:#9b969b;
-            &:hover{
-                fill:white;
-            }
-        }
-        &::after{
-            display: none;
-
-        }
-    }
-
-    .icon {
-        width: 50px;
-        height: 50px;
-        vertical-align: -0.15em;
-        overflow: hidden;
-    }
     .swiper-container {
         width: 100%;
         height: 470px;
@@ -156,4 +98,5 @@
         }
 
     }
+
 </style>

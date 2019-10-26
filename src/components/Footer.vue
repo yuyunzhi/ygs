@@ -11,7 +11,6 @@
             <div class="net"><img src="../assets/ghs.png" alt="">
                 <span class="link1" @click="openPage">{{footerInfo.net1}}</span>
                 <span class="link2" @click="openICP">{{footerInfo.net2}}</span>
-
             </div>
 
         </div>
