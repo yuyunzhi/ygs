@@ -11,9 +11,7 @@
       // 初始化 TweenJs 监听
     },
 
-    methods: {
-
-    }
+    methods: {}
 
   }
 

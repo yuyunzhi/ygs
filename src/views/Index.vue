@@ -10,9 +10,9 @@
                     <div class="sider-bar">
                         <ul >
                             <li @click="scrollServe('header',0)">Home</li>
-                            <li @click="scrollServe('service',350)">Service</li>
-                            <li @click="scrollServe('introduce',350)">Company Profile</li>
-                            <li @click="scrollServe('contact',350)">Contact Us</li>
+                            <li @click="scrollServe('service',500)">Service</li>
+                            <li @click="scrollServe('introduce',500)">Company Profile</li>
+                            <li @click="scrollServe('contact',500)">Contact Us</li>
                         </ul>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                 <Title :title="titles[0]" class="title"></Title>
                 <div class="content">
                     <div class="report" @click="gotoNewsPage">Industrial research: One-year progress report</div>
-                    <div class="jd" >Hiring industrial project manager</div>
+                    <div class="jd" @click="viewPdf">Hiring industrial project manager</div>
                 </div>
             </div>
             <div class="decision">
@@ -42,7 +42,7 @@
                     <div class="challenge">
                         <div class="en-title">Challenges</div>
                         <div class="ch-title">
-                            <img src="../assets/logo.png" alt="">
+                            <!--<img src="../assets/logo.png" alt="">-->
                         </div>
                         <ul class="list">
                             <li>For all decision makers, the two biggest challenges are the lack of information and the lack of ability to process information. For a long time, these two challenges were insurmountable.</li>
@@ -52,7 +52,7 @@
                     <div class="revolution">
                         <div class="en-title">Revolution</div>
                         <div class="ch-title">
-                            <img src="../assets/logo.png" alt="">
+                            <!--<img src="../assets/logo.png" alt="">-->
                         </div>
                         <ul class="list">
                             <li> CSS will revolutionize “decision science.” It provides a tool for modern countries and modern businesses to respond to highly complex and rapidly changing environments.</li>
@@ -66,13 +66,13 @@
                 <Title :title="titles[2]" class="title"></Title>
                 <div class="content">
                     <div class="button">
-                        <div>Wealth: </div>
+                        <div>Wealth</div>
                         <div>Industries and Corporations</div>
                         <div @click="gotoIndustryPage">To Know More</div>
                     </div>
                     <img src="../assets/afuhan.png" alt="">
                     <div class="button">
-                        <div>Power:</div>
+                        <div>Power</div>
                         <div>Politics and Society</div>
                         <div @click="gotoSocialPage">To Know More</div>
                     </div>
@@ -142,15 +142,17 @@ export default {
         // console.log('news.scrollTop',document.documentElement.scrollTop  );
         window.scroll(0,1)
         this.tweenAni();
-
-        window.addEventListener("scroll",  (e)=> {
+        window.addEventListener("scroll",  this.scrollMethod)
+    },
+    destroyed(){
+        window.removeEventListener('scroll',this.scrollMethod)
+    },
+    methods:{
+        scrollMethod(){
             // console.log(document.documentElement.scrollTop);
             this.currentScrollTop = document.documentElement.scrollTop;
             this.updateHeight()
-
-        })
-    },
-    methods:{
+        },
         updateHeight(){
             this.header = document.getElementsByClassName('header')[0].offsetTop
 
@@ -179,7 +181,6 @@ export default {
             start = currentScrollTop
             end=this[block]+scroll
             this.scrollPage(start,end)
-
         },
         scrollPage(start,end){
             console.log('start:', start);
@@ -206,17 +207,19 @@ export default {
         },
 
         gotoIndustryPage(){
-            this.$router.push("/industry/en")
+            this.$router.push("/industry")
         },
         gotoNewsPage(){
-            this.$router.push("/news/en")
+            this.$router.push("/news")
         },
         gotoSocialPage(){
-            this.$router.push("/social/en")
+            this.$router.push("/social")
         },
-        gotoIndexPage(){
-            this.$router.push("/en")
-        }
+        viewPdf(){
+            this.$router.push("/")
+
+        },
+
     },
     components:{
         Swiper:()=>import("@/components/Swiper.vue"),
@@ -268,7 +271,7 @@ export default {
 
                    >span{
                        color:white;
-                       font-size:12px;
+                       font-size:14px;
                        font-weight:bolder;
                        line-height: 20px;
 
@@ -464,11 +467,12 @@ export default {
                         background:#53b095;
                         font-size:14px;
                         font-weight:600;
-                        width:100px;
+                        width:120px;
                         height:42px;
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        margin:0 auto;
                         margin-top:5px;
                         border-radius: 3px;
                         cursor: pointer;

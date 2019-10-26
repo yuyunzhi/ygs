@@ -8,7 +8,7 @@
         </div>
         <div class="sider-bar">
           <ul class="bar">
-            <li>首页</li>
+            <li>Home</li>
             <li>我们的客户</li>
             <li>应用场景</li>
             <li>尖端服务</li>

@@ -11,30 +11,25 @@ const router = new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/index/en',
+      path: '/',
       name: 'home',
       component: Home
     },
     {
-      path: '/industry/en',
+      path: '/industry',
       name: 'industry',
       component: ()=>import('@/views/Industry.vue')
     },
     {
-      path: '/social/en',
+      path: '/social',
       name: 'social',
       component: ()=>import('@/views/Social.vue')
     },
     {
-      path: '/news/en',
+      path: '/news',
       name: 'news',
       component: ()=>import('@/views/News.vue')
-    },
-    // {
-    //   path: '/jd',
-    //   name: 'jd',
-    //   component: ()=>import('@/views/JD.vue')
-    // },
+    }
   ]
 })
 
