@@ -177,45 +177,60 @@
         <div class="content">
           <div class="item">
             <span>弈格思-2018-机械制造行业研究报告摘要</span>
-              <svg class="icon down" aria-hidden="true" @click="downLoadPDF" >
+            <a href="//icssai-consulting.com/en/pdf/jxzz.pdf" download="弈格思-2018-机械制造行业研究报告摘要" target="_blank">
+              <svg class="icon down" aria-hidden="true"  >
                 <use xlink:href="#icon-down"></use>
               </svg>
+            </a>
+
           </div>
           <div class="item">
             <span>弈格思-2018-房地产行业报告摘要</span>
-            <svg class="icon down" aria-hidden="true" @click="downLoadPDF" >
-              <use xlink:href="#icon-down"></use>
-            </svg>
+            <a href="//icssai-consulting.com/en/pdf/fdc.pdf" download="弈格思-2018-房地产行业报告摘要" target="_blank">
+              <svg class="icon down" aria-hidden="true"  >
+                <use xlink:href="#icon-down"></use>
+              </svg>
+            </a>
           </div>
           <div class="item">
             <span>弈格思-2019-乳制品行业报告摘要</span>
-            <svg class="icon down" aria-hidden="true" @click="downLoadPDF" >
-              <use xlink:href="#icon-down"></use>
-            </svg>
+            <a href="//icssai-consulting.com/en/pdf/rzp.pdf" download="弈格思-2019-乳制品行业报告摘要" target="_blank">
+              <svg class="icon down" aria-hidden="true"  >
+                <use xlink:href="#icon-down"></use>
+              </svg>
+            </a>
           </div>
           <div class="item">
             <span>弈格思-2019-汽车产业报告摘要</span>
-            <svg class="icon down" aria-hidden="true" @click="downLoadPDF" >
-              <use xlink:href="#icon-down"></use>
-            </svg>
+            <a href="//icssai-consulting.com/en/pdf/qc.pdf" download="弈格思-2019-汽车产业报告摘要" target="_blank">
+              <svg class="icon down" aria-hidden="true"  >
+                <use xlink:href="#icon-down"></use>
+              </svg>
+            </a>
           </div>
           <div class="item">
             <span>弈格思-2019-食品行业研究报告摘要</span>
-            <svg class="icon down" aria-hidden="true" @click="downLoadPDF" >
-              <use xlink:href="#icon-down"></use>
-            </svg>
+            <a href="//icssai-consulting.com/en/pdf/sp.pdf" download="弈格思-2019-食品行业研究报告摘要" target="_blank">
+              <svg class="icon down" aria-hidden="true"  >
+                <use xlink:href="#icon-down"></use>
+              </svg>
+            </a>
           </div>
           <div class="item">
             <span>弈格思-2019-医药行业研究报告摘要</span>
-            <svg class="icon down" aria-hidden="true" @click="downLoadPDF" >
-              <use xlink:href="#icon-down"></use>
-            </svg>
+            <a href="//icssai-consulting.com/en/pdf/yy.pdf" download="弈格思-2019-医药行业研究报告摘要" target="_blank">
+              <svg class="icon down" aria-hidden="true"  >
+                <use xlink:href="#icon-down"></use>
+              </svg>
+            </a>
           </div>
           <div class="item">
             <span>弈格思-2019-汽车零配件研究报告摘要</span>
-            <svg class="icon down" aria-hidden="true" @click="downLoadPDF" >
-              <use xlink:href="#icon-down"></use>
-            </svg>
+            <a href="//icssai-consulting.com/en/qclpj.pdf" download="弈格思-2019-汽车零配件研究报告摘要" target="_blank">
+              <svg class="icon down" aria-hidden="true"  >
+                <use xlink:href="#icon-down"></use>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -369,6 +384,7 @@
         this.$router.push("/social")
       },
       downLoadPDF(){
+
       },
     },
     components:{

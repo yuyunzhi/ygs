@@ -244,7 +244,7 @@
                 this.$router.push("/social")
             },
             viewPdf() {
-                this.$router.push("/")
+                this.$router.push("/jd")
 
             },
             gotoIndexPage() {

@@ -29,6 +29,11 @@ const router = new Router({
       path: '/news',
       name: 'news',
       component: ()=>import('@/views/News.vue')
+    },
+    {
+      path: '/jd',
+      name: 'jd',
+      component: ()=>import('@/views/JD.vue')
     }
   ]
 })
