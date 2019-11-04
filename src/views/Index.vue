@@ -84,13 +84,13 @@
                 <Title :title="titles[2]" class="title"></Title>
                 <div class="content">
                     <div class="button">
-                        <div>Wealth</div>
+                        <div style="font-size:30px;">Wealth</div>
                         <div>Industries and Corporations</div>
                         <div @click="gotoIndustryPage">To Know More</div>
                     </div>
                     <img src="../assets/afuhan.png" alt="">
                     <div class="button">
-                        <div>Power</div>
+                        <div style="font-size:30px;">Power</div>
                         <div>Politics and Society</div>
                         <div @click="gotoSocialPage">To Know More</div>
                     </div>
@@ -99,17 +99,7 @@
             <div class="introduce">
                 <Title :title="titles[3]" class="title"></Title>
                 <div class="content">
-                    ICSSAI (integrated computational social science and artificial intelligence) is a strategic
-                    consulting company with CSS as its core technology platform.. The company integrates computational
-                    social science, computer technology, big data, artificial intelligence, and expert knowledge, using
-                    them to build a number of intelligent strategic decision-making computer simulation systems and
-                    platforms with independent intellectual property rights for different strategic decision-making
-                    problems. Based on these computer simulation systems and platforms, the company is able to model
-                    strategic decisions, strategic behaviors, strategic competition results, and strategic risks while
-                    providing customers with scientific and comprehensive strategic analysis, strategic decision-making,
-                    and strategic competition consulting. We help customers build a scientific and model-based
-                    decision-making system using data. Based on CSS, ICSSAI will work side by side with customers to
-                    tailor strategic decisions and help clients create sustainable profit.
+                    ICSSAI (integrated computational social science and artificial intelligence) is a strategic consulting company with CSS as its core technology platform. The company integrates computational social science, computer technology, big data, artificial intelligence, and expert knowledge, using them to build a number of intelligent strategic decision-making computer simulation systems and platforms with independent intellectual property rights for different strategic decision-making problems. Based on these computer simulation systems and platforms, the company is able to model strategic decisions, strategic behaviors, strategic competition results, and strategic risks while providing customers with scientific and comprehensive strategic analysis, strategic decision-making, and strategic competition consulting. We help customers build a scientific and model-based decision-making system using data. Based on CSS, ICSSAI will work side by side with customers to tailor strategic decisions and help clients create sustainable profit.
                 </div>
             </div>
         </main>
@@ -137,11 +127,11 @@
                     },
                     {
                         englishName: 'Revolution In Decision Making',
-                        desc1: 'Wealth and power drive human society.Acquiring and maintaining wealth and power require strategic thinking.By applying computational social science (CSS), ICSSAI is committed to helping clients make strategic decisions.'
+                        desc1: 'Wealth and power drive human society. Acquiring and maintaining wealth and power require strategic thinking. By applying computational social science (CSS), ICSSAI is committed to helping clients make strategic decisions.'
                     },
                     {
                         englishName: 'Our Services',
-                        desc1: 'Covers social networks, corporate strategy simulation and management, competitive strategy optimization, political risk prediction, and other fields.[This is not a complete sentence. What specifically covers social networks, etc.?]',
+                        desc1: 'Covers social networks, corporate strategy simulation and management, competitive strategy optimization, political risk prediction, and other fields.'
                     },
                     {
                         englishName: 'Company profile',

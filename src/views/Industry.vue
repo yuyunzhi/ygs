@@ -66,7 +66,7 @@
           </li>
           <li>
             <h4 style="text-align: center">Industrial Policy</h4>
-            <div>Our research team has been committed to accurately quantifying and measuring the relationships among industries, which provides a solid foundation for us, using big data[What exactly do you mean by “big data?”], to accurately judge the effects of various industrial policies in different countries, especially China.</div>
+            <div>Our research team has been committed to accurately quantifying and measuring the relationships among industries, which provides a solid foundation for us, using big data, to accurately judge the effects of various industrial policies in different countries, especially China.</div>
           </li>
         </ul>
       </div>
@@ -119,11 +119,11 @@
           <p class="bolder grey">Spatial Model</p>
           <p class="grey margin-bottom-20">A linear correlation model is established, and the Kalman filter is used to train the model and make a prediction on the future trend of variables.</p>
           <img src="../assets/industry/atm.gif" alt="" class="img-size">
-          <p class="bolder grey">ABM[Spell this out unless you have introduced this acronym elsewhere or it is very familiar in your field/occupation.]-Based Industrial Evolution Simulation</p>
+          <p class="bolder grey">ABM Based Industrial Evolution Simulation</p>
           <p class="grey margin-bottom-20">States and shapes play automatically</p>
           <p class="blue-green left margin-bottom-10 bolder">Our advanced analytics and unique simulation platform enable us to discover insights from data that are difficult for others to discover, which brings significant value to the service we offer to our customers engaged in strategic decision making.</p>
           <p class="left margin-bottom-10">We use advanced data analysis methods—such as panel data regression analysis and Bayesian estimation models—that are not used by other consulting agencies.</p>
-          <p class="blue-green margin-bottom-10 left bolder">We developed and patented an ABM[Spell this out unless you have introduced this acronym elsewhere or it is very familiar in your field/occupation.]-based “Industrial Evolution Simulation Platform[Is this a formal name of a program or operating system, or is it a general description of what it is? I the latter, don’t capitalize the words.]”, which can instantly and dynamically simulate positioning, pricing, sales strategy, and overall strategic competition results, thereby providing insights that are not discovered by general industry analysis. </p>
+          <p class="blue-green margin-bottom-10 left bolder">We developed and patented an ABM based “Industrial Evolution Simulation Platform”, which can instantly and dynamically simulate positioning, pricing, sales strategy, and overall strategic competition results, thereby providing insights that are not discovered by general industry analysis. </p>
           <p class="margin-bottom-10 left">We have integrated multiple economic databases at the micro level (enterprise), meso level (industry), and macro level (national and international) to provide a comprehensive data foundation for simulating firm performance and industry evolution.</p>
 
         </div>
@@ -146,14 +146,14 @@
             </svg>
             <span class="blue-green">Evolution of Industries and Competitive Strategy of Enterprises</span>
           </div>
-            <p class="left bolder grey">We have accumulated and integrated a large database of enterprises, industry, and economy. [What aspects of those areas make up your database? What did you gather data on?]On this basis, with the accumulation of our research in global value chains, global industry chain data, and theory and policy [What type of theory and policy?]research, we have developed a simulation platform that can accurately measure the growth and evolution of industries and the survival of companies in the entire industry.</p>
+            <p class="left bolder grey">We have accumulated and integrated a large database of enterprises, industry, and economy. On this basis, with the accumulation of our research in global value chains, global industry chain data, and theory and policy research, we have developed a simulation platform that can accurately measure the growth and evolution of industries and the survival of companies in the entire industry.</p>
           <div class="title">
             <svg class="icon industry" aria-hidden="true">
               <use xlink:href="#icon-shuben"></use>
             </svg>
             <span class="blue-green">Industry Evolution and Industrial Policy</span>
           </div>
-          <p class="left bolder grey">Our research team has been committed to accurately quantifying and measuring the relationships among industries in recent years, which provides a solid foundation for us to accurately judge the effects of various industrial policies in different countries, especially in China. Particularly, we are able to determine the effect of industrial policies for industrial evolution by utilizing big data[Again, what do you mean by “big data?”]. </p>
+          <p class="left bolder grey">Our research team has been committed to accurately quantifying and measuring the relationships among industries in recent years, which provides a solid foundation for us to accurately judge the effects of various industrial policies in different countries, especially in China. Particularly, we are able to determine the effect of industrial policies for industrial evolution by utilizing big data. </p>
 
         </div>
       </div>
@@ -162,7 +162,7 @@
         <div class="article">
           <img src="../assets/industry/1534489634(1).png" alt="" class="img-size-500 margin-top-20">
           <p class="blue-green left bolder margin-bottom-20">Ethiopian Industrialization and the Construction of the Yaji Railway Economic Corridor</p>
-          <p class="left bolder grey margin-bottom-20">The African Research Group of the School of International Relations and Public Affairs of Fudan University, on December 9, 2017, with group members Tang Shiping, Zheng Yu, Zhao Jianzhi, Jiang Wei, Pippa, and Liu Chen.[This seemed like a photo caption to me, so I edited it accordingly.]。</p>
+          <p class="left bolder grey margin-bottom-20">The African Research Group of the School of International Relations and Public Affairs of Fudan University, on December 9, 2017, with group members Tang Shiping, Zheng Yu, Zhao Jianzhi, Jiang Wei, Pippa, and Liu Chen.</p>
           <p class="left bolder grey margin-bottom-20">The project was commissioned by Dr. Arkebe Oqubay, Special Adviser to the Prime Minister of Ethiopia, to conduct in-depth research on the coordinated development of the economy as related to the Ethiopian Industrial Park, Addis Abbas, and the Djibouti Railway.</p>
           <p class="left bolder grey margin-bottom-20">The members of the research team have studied Changzhou, Jiangsu, Wuhu, Anhui, Chengdu, Chongqing, and the Chongqing Economic Development Zone and have visited the Ethiopian Industrial Park. They have conducted in-depth communications with relevant Ethiopian leaders and government ministers. The theoretical basis, institutional environment, basic direction, and development prospects of industrial policies have been thoroughly studied. The research results of the project have been highly evaluated by the Ministry of Commerce and the Ministry of Foreign Affairs, which made them an important factor in the Chinese government’s  collaboration in the African economy and formulation of industrial policy for Ethiopia.</p>
           <img src="../assets/industry/tuoou.png" alt="" class="img-size-500 ">
